@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Head -->
 
 <head>
     <meta charset="UTF-8">
@@ -8,19 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Inlcude Tailwind CSS -->
     <link rel="stylesheet" href="/dist/output.css">
-    <!-- Include JQuery -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Include local Javascript file -->
-    <script src="home.js"></script>
+    <script src="admin.js"></script>
     <!-- Title icon -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.png">
     <!-- END -->
-    <title>Admin Panel</title>
+    <title>Dashboard</title>
 </head>
-<!-- Body -->
 
-<body>
-    <div></div>
+<body class="bg-gradient-to-r from-violet-500 to-fuchsia-500">
+    <!-- Importing Navbar -->
+    <div w3-include-html="uni/navbar.html"></div>
+    <!-- Rows and Cols -->
+    <div class="p-5 sm:ml-64">
+        <div class="p-4 rounded-lg">
+            <div class="grid grid-cols-3 gap-4 mb-4">
+                <div class="flex items-center justify-center h-24 rounded-lg bg-gray-200 shadow-md hover:shadow-xl">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">ITEM</p>
+                </div>
+                <div class="flex items-center justify-center h-24 rounded-lg bg-gray-200 shadow-md hover:shadow-xl">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">ITEM</p>
+                </div>
+                <div class="flex items-center justify-center h-24 rounded-lg bg-gray-200 shadow-md hover:shadow-xl">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">ITEM</p>
+                </div>
+                <div class="flex items-center justify-center h-24 rounded-lg bg-gray-200 shadow-md hover:shadow-xl">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">ITEM</p>
+                </div>
+                <div class="flex items-center justify-center h-24 rounded-lg bg-gray-200 shadow-md hover:shadow-xl">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">ITEM</p>
+                </div>
+                <div class="flex items-center justify-center h-24 rounded-lg bg-gray-200 shadow-md hover:shadow-xl">
+                    <p class="text-2xl text-gray-400 dark:text-gray-500">ITEM</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center h-48 rounded-lg bg-gray-200 shadow-md hover:shadow-xl">
+                <p class="text-2xl text-gray-400 dark:text-gray-500">ITEM</p>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <!-- Used for importing html file -->
+    <script>
+        includeHTML();
+    </script>
 </body>
 
 </html>

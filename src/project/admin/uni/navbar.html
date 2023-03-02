@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inlcude Tailwind CSS -->
+    <link rel="stylesheet" href="/dist/output.css">
+    <!-- Include local Javascript file -->
+    <script src="admin.js"></script>
+    <!-- Title icon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <!-- END -->
+    <title>Navbar</title>
+</head>
+
+<body>
+    <!-- Side Navbar -->
+    <aside class="fixed w-64 h-screen">
+        <div class="flex flex-col justify-center h-full overflow-y-auto bg-white shadow-xl">
+            <ul class="p-5 m-5 bg-slate-400 rounded-full shadow-md hover:shadow-xl">
+                <a href="profile.html">
+                    <img class="border-4 border-red-700 rounded-full" src='/src/project/images/sample.jpg'
+                        alt='Profile Photo' />
+                </a>
+            </ul>
+            <ul>
+                <li
+                    class="flex flex-row justify-center rounded-lg text-white text-xl bg-red-500 m-5 p-3 shadow-sm hover:shadow-xl">
+                    <a href="index.html">Dashboard</a>
+                </li>
+                <li
+                    class="flex flex-row justify-center rounded-lg text-white text-xl bg-blue-600 m-5 p-3 shadow-sm hover:shadow-xl">
+                    <a href="index.html">Menu</a>
+                </li>
+                <li
+                    class="flex flex-row justify-center rounded-lg text-white text-xl bg-yellow-700 m-5 p-3 shadow-sm hover:shadow-xl">
+                    <a href="index.html">Menu</a>
+                </li>
+            </ul>
+            <ul>
+                <li
+                    class="flex flex-row justify-center rounded-lg text-white text-xl bg-green-800 m-5 p-3 shadow-sm hover:shadow-xl">
+                    <a href="profile.html">Profile</a>
+                </li>
+                <li
+                    class="flex flex-row justify-center rounded-lg text-white text-xl bg-cyan-900 m-5 p-3 shadow-sm hover:shadow-xl">
+                    <a href="/src/project/home/adminLogin.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- Side Navbar END -->
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inlcude Tailwind CSS -->
+    <link rel="stylesheet" href="/dist/output.css">
+    <!-- Include local Javascript file -->
+    <script src="admin.js"></script>
+    <!-- Title icon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <!-- END -->
+    <title>Profile</title>
+</head>
+
+<body class="">
+    <div class="flex flex-row">
+        <!-- Importing Navbar -->
+        <div class="basis-1/5" w3-include-html="uni/navbar.html"></div>
+        <!-- Profile -->
+        <div class="basis-full flex h-screen w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 justify-center">
+            <div class="basis-1/2 bg-red-700 m-5 p-5 rounded-lg">
+                <img class="basis-1/3 border-4 border-black rounded-full"
+                    src='../images/sample.jpg'
+                    alt='Oscar Self Portriat' />
+            </div>
+            <div class="basis-3/4 bg-cyan-600 m-5 p-5 rounded-lg">
+                <h1>Description</h1>
+            </div>
+        </div>
+        <!-- END -->
+    </div>
+    <!-- Used for importing html file -->
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
