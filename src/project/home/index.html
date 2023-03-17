@@ -22,49 +22,108 @@
 <body class="bg-gradient-to-r from-sky-500 to-indigo-500">
     <!-- Navbar -->
     <div id="navbar"></div>
+    <!-- Slide -->
+    <div class="relative mx-auto shadow-lg m-5 p-5">
+        <div class="slide relative">
+            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/mario.jpg"
+                alt="slideshow">
+            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
+                PLAYGROUND</div>
+        </div>
+        <div class="slide relative">
+            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/mario4.jpg"
+                alt="slideshow">
+            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
+                PLAYGROUND</div>
+        </div>
+        <div class="slide relative">
+            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/tom-and-jerry2.jpg"
+                alt="slideshow">
+            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
+                PLAYGROUND</div>
+        </div>
+        <div class="slide relative">
+            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/gamebgnew.jpg"
+                alt="slideshow">
+            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
+                PLAYGROUND</div>
+        </div>
+        <div class="slide relative">
+            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/learningkids.jpg"
+                alt="slideshow">
+            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
+                PLAYGROUND</div>
+        </div>
+        <div class="slide relative">
+            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/playingkids2.jpg"
+                alt="slideshow">
+            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
+                PLAYGROUND</div>
+        </div>
+        <div class="slide relative">
+            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/tom-and-jerry.jpg"
+                alt="slideshow">
+            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
+                PLAYGROUND</div>
+        </div>
+        <!-- The previous button -->
+        <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+            onclick="moveSlide(-1)">❮</a>
+
+        <!-- The next button -->
+        <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+            onclick="moveSlide(1)">❯</a>
+    </div>
     <!-- Images -->
     <div class="md:container md:mx-auto flex flex-row h-80 w-96">
-        <div class="shrink backdrop-blur-sm bg-white/30 m-6 p-6 rounded-lg hover:shadow-lg hover:h-96">
-            <img class="h-full w-full rounded-lg" src="../images/sample.jpg" alt="image description">
+        <div class="basis-1/4 shrink backdrop-blur-sm bg-white/20 m-6 p-6 rounded-lg hover:shadow-xl hover:basis-1/2">
+            <img class="h-full w-full rounded-lg" src="../image/gboy.svg" alt="image description">
             <center>
                 <h2 class="text-white text-md">Games</h2>
             </center>
         </div>
-        <div class="shrink backdrop-blur-sm bg-white/30 m-6 p-6 rounded-lg hover:shadow-lg hover:h-96">
-            <img class="h-full w-full rounded-lg" src="../images/sample.jpg" alt="image description">
+        <div class="basis-1/4 shrink backdrop-blur-sm bg-white/20 m-6 p-6 rounded-lg hover:shadow-xl hover:basis-1/2">
+            <img class="h-full w-full rounded-lg" src="../image/letter.svg" alt="image description">
+            <center>
+                <h2 class="text-white text-md">Lessons</h2>
+            </center>
+        </div>
+        <div class="basis-1/4 shrink backdrop-blur-sm bg-white/20 m-6 p-6 rounded-lg hover:shadow-xl hover:basis-1/2">
+            <img class="h-full w-full rounded-lg" src="../image/youtube.svg" alt="image description">
             <center>
                 <h2 class="text-white text-md">Videos</h2>
             </center>
         </div>
-        <div class="shrink backdrop-blur-sm bg-white/30 m-6 p-6 rounded-lg hover:shadow-lg hover:h-96">
-            <img class="h-full w-full rounded-lg" src="../images/sample.jpg" alt="image description">
+        <div class="basis-1/4 shrink backdrop-blur-sm bg-white/20 m-6 p-6 rounded-lg hover:shadow-xl hover:basis-1/2">
+            <img class="h-full w-full rounded-lg" src="../image/booksicon2.svg" alt="image description">
             <center>
                 <h2 class="text-white text-md">Books</h2>
             </center>
         </div>
     </div>
     <!-- End -->
-    <!-- Menu -->
-    <div class="bg-red-600 flex flex-row mx-5 p-5 shadow-lg rounded-lg italic">
-        <div
-            class="bg-green-600 basis-1/4 mx-5 rounded-sm hover:shadow-md text-white text-lg text-center hover:text-xl">
-            <img class="rounded-sm hover:shadow-lg" src="../images/sample.jpg" alt="image not found!">
-            <h1 class="m-5">Games</h1>
-        </div>
-        <div class="bg-blue-600 basis-1/4 mx-5 rounded-sm hover:shadow-md text-white text-lg text-center hover:text-xl">
-            <img class="rounded-sm hover:shadow-lg" src="../images/sample.jpg" alt="image not found!">
-            <h1 class="m-5">Books</h1>
-        </div>
-        <div
-            class="bg-yellow-600 basis-1/4 mx-5 rounded-sm hover:shadow-md text-white text-lg text-center hover:text-xl">
-            <img class="rounded-sm hover:shadow-lg" src="../images/sample.jpg" alt="image not found!">
-            <h1 class="m-5">Lessons</h1>
-        </div>
-        <div class="bg-gray-600 basis-1/4 mx-5 rounded-sm hover:shadow-md text-white text-lg text-center hover:text-xl">
-            <img class="rounded-sm hover:shadow-lg" src="../images/sample.jpg" alt="image not found!">
-            <h1 class="m-5">Videos</h1>
-        </div>
-    </div>
+    <!-- All Javascript Codes -->
+    <script>
+        // Set the default active slide to the first one:
+        let slideIndex = 1;
+        showSlide(slideIndex);
+        // Change slide with the button:
+        function moveSlide(moveStep) {
+            showSlide(slideIndex += moveStep);
+        }
+        function showSlide(n) {
+            let i;
+            const slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            // Hide all slides:
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.add('hidden');
+            }
+            // Show the active slide:
+            slides[slideIndex - 1].classList.remove('hidden');
+        }
+    </script>
     <!-- END -->
 </body>
 
