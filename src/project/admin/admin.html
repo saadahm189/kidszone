@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Inlcude Tailwind CSS -->
+     <link rel="stylesheet" href="/dist/output.css">
+     <!-- Include local Javascript file -->
+     <script src="admin.js"></script>
+     <!-- Title icon -->
+     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+     <!-- END -->
+     <title>Dashboard</title>
+</head>
+
+<body class="bg-gray-200">
+     <!-- Include Header -->
+     <div w3-include-html="partial/navbar.html"></div>
+     <!-- HTML -->
+     <div class="flex flex-row">
+          <!-- Include Header -->
+          <div w3-include-html="partial/sidebar.html"></div>
+          <!-- HTML -->
+          <div class="bg-white m-5 p-5 basis-4/5 rounded-lg">
+               <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-gray-200 m-5 p-5 shadow-lg">
+                         Saad
+                    </div>
+                    <div class="bg-gray-200 m-5 p-5 shadow-lg">
+                         Saad
+                    </div>
+                    <div class="bg-gray-200 m-5 p-5 shadow-lg">
+                         Saad
+                    </div>
+                    <div class="bg-gray-200 m-5 p-5 shadow-lg">
+                         Saad
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- Used for importing html file -->
+     <script>
+          includeHTML();
+     </script>
+</body>
+
+</html>
