@@ -23,58 +23,59 @@
     <!-- Navbar -->
     <div id="navbar"></div>
     <!-- Slide Show -->
-    <div class="relative mx-auto shadow-lg m-5 p-5">
-        <div class="slide relative">
-            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/mario.jpg"
-                alt="slideshow">
-            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
-                PLAYGROUND</div>
+    <div class="flex flex-row m-5">
+        <div class="basis-1/4">
+            <p class="text-6xl m-5 p-5">Have <b class="text-green-700">FUN</b> And<b class="text-yellow-500"></b>
+                Learn</b></p>
         </div>
-        <div class="slide relative">
-            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/mario4.jpg"
-                alt="slideshow">
-            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
-                PLAYGROUND</div>
+        <div class="basis-3/4 rounded-lg">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/mario.jpg"
+                        style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container shadow-lg">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm" src="../slideShowImages/mario4.jpg"
+                        style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm"
+                        src="../slideShowImages/tom-and-jerry2.jpg" style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container shadow-lg">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm"
+                        src="../slideShowImages/gamebgnew.jpg" style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm"
+                        src="../slideShowImages/learningkids.jpg" style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container shadow-lg">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm"
+                        src="../slideShowImages/playingkids2.jpg" style="width:100%">
+                </div>
+            </div>
+            <!-- Dots -->
+            <div class="hidden">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
-        <div class="slide relative">
-            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/tom-and-jerry2.jpg"
-                alt="slideshow">
-            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
-                PLAYGROUND</div>
-        </div>
-        <div class="slide relative">
-            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/gamebgnew.jpg"
-                alt="slideshow">
-            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
-                PLAYGROUND</div>
-        </div>
-        <div class="slide relative">
-            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/learningkids.jpg"
-                alt="slideshow">
-            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
-                PLAYGROUND</div>
-        </div>
-        <div class="slide relative">
-            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/playingkids2.jpg"
-                alt="slideshow">
-            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
-                PLAYGROUND</div>
-        </div>
-        <div class="slide relative">
-            <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/tom-and-jerry.jpg"
-                alt="slideshow">
-            <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">WELCOME TO YOUR
-                PLAYGROUND</div>
-        </div>
-        <!-- The previous button -->
-        <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
-            onclick="moveSlide(-1)">❮</a>
-
-        <!-- The next button -->
-        <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
-            onclick="moveSlide(1)">❯</a>
     </div>
-    <!-- Menu -->
     <div class="md:container md:mx-auto flex flex-row h-80 w-96">
         <div class="basis-1/4 shrink backdrop-blur-sm bg-white/20 m-6 p-6 rounded-lg hover:shadow-xl hover:basis-1/2">
             <img class="h-full w-full rounded-lg" src="../imgSec/gboy.svg" alt="image description">
@@ -102,29 +103,29 @@
         </div>
     </div>
     <!-- End -->
-    <!-- All Javascript Codes -->
+    <!-- Image SlideShow -->
     <script>
-        // Set the default active slide to the first one:
-        let slideIndex = 1;
-        showSlide(slideIndex);
-        // Change slide with the button:
-        function moveSlide(moveStep) {
-            showSlide(slideIndex += moveStep);
-        }
-        function showSlide(n) {
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
             let i;
-            const slides = document.getElementsByClassName("slide");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            // Hide all slides:
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
             for (i = 0; i < slides.length; i++) {
-                slides[i].classList.add('hidden');
+                slides[i].style.display = "none";
             }
-            // Show the active slide:
-            slides[slideIndex - 1].classList.remove('hidden');
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
         }
     </script>
-    <!-- END -->
 </body>
 
 </html>
