@@ -23,7 +23,7 @@
     <!-- Navbar -->
     <div id="navbar"></div>
     <!-- Login Panel by Saad -->
-    <form class="flex flex-row justify-center backdrop-blur-sm">
+    <form class="flex flex-row justify-center backdrop-blur-sm" action="" method="POST">
         <div class="m-3 p-3 h-screen rounded-lg">
             <img class="rounded-lg h-full shadow-lg bg-white/30" src="../imgSec/adminwal.png" alt="admin wall">
         </div>
@@ -35,7 +35,7 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="username">
                     Username
                 </label>
-                <input
+                <input name="username"
                     class="appearance-none border rounded-full shadow-inner w-full p-3 text-gray-600 text-center leading-tight focus:outline-none focus:shadow-outline"
                     id="username" type="text" placeholder="Username">
             </div>
@@ -43,7 +43,7 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="password">
                     Password
                 </label>
-                <input
+                <input name="password"
                     class="appearance-none border rounded-full shadow-inner w-full p-3 text-gray-600 text-center mb-3 leading-tight focus:outline-none focus:shadow-outline"
                     id="password" type="password" placeholder="*************">
                 <p class="text-red-500 text-sm italic text-center">Please type a password</p>
@@ -51,10 +51,8 @@
             <div class="flex items-center justify-between">
                 <button
                     class="shadow-lg bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
-                    type="button">
-                    <a href="#">
-                        Sign In
-                    </a>
+                    type="submit" value="Submit">
+                    Login
                 </button>
                 <a class="inline-block align-baseline font-bold text-sm text-red-500 hover:text-blue-800"
                     href="#">Forgot Password?
