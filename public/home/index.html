@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inlcude Tailwind CSS -->
+    <link rel="stylesheet" href="../../dist/output.css">
+    <!-- Include JQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include local Javascript file -->
+    <script src="home.js"></script>
+    <!-- Title icon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <!-- END -->
+    <title>Home</title>
+</head>
+<!-- Body -->
+
+<body class="bg-gradient-to-r from-sky-500 to-indigo-500">
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <!-- Slide Show -->
+    <div class="flex flex-row m-5">
+        <div class="basis-1/4">
+            <p class="text-6xl m-5 p-5">Have <b class="text-green-700">FUN</b> And<b class="text-yellow-500"></b>
+                Learn</b></p>
+        </div>
+        <div class="basis-3/4 rounded-lg">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-lg" src="../slideShowImages/mario.jpg"
+                        style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container shadow-lg">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm" src="../slideShowImages/mario4.jpg"
+                        style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm"
+                        src="../slideShowImages/tom-and-jerry2.jpg" style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container shadow-lg">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm"
+                        src="../slideShowImages/gamebgnew.jpg" style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm"
+                        src="../slideShowImages/learningkids.jpg" style="width:100%">
+                </div>
+            </div>
+            <div class="slideshow-container shadow-lg">
+                <div class="mySlides fade">
+                    <img class="w-full h-[300px] object-cover rounded-lg shadow-sm"
+                        src="../slideShowImages/playingkids2.jpg" style="width:100%">
+                </div>
+            </div>
+            <!-- Dots -->
+            <div class="hidden">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+    <div class="md:container md:mx-auto flex flex-row h-80 w-96">
+        <div class="basis-1/4 shrink backdrop-blur-sm bg-white/20 m-6 p-6 rounded-lg hover:shadow-xl hover:basis-1/2">
+            <img class="h-full w-full rounded-lg" src="../imgSec/gboy.svg" alt="image description">
+            <center>
+                <h2 class="text-white text-md">Games</h2>
+            </center>
+        </div>
+        <div class="basis-1/4 shrink backdrop-blur-sm bg-white/20 m-6 p-6 rounded-lg hover:shadow-xl hover:basis-1/2">
+            <img class="h-full w-full rounded-lg" src="../imgSec/letter.svg" alt="image description">
+            <center>
+                <h2 class="text-white text-md">Lessons</h2>
+            </center>
+        </div>
+        <div class="basis-1/4 shrink backdrop-blur-sm bg-white/20 m-6 p-6 rounded-lg hover:shadow-xl hover:basis-1/2">
+            <img class="h-full w-full rounded-lg" src="../imgSec/youtube.svg" alt="image description">
+            <center>
+                <h2 class="text-white text-md">Videos</h2>
+            </center>
+        </div>
+        <div class="basis-1/4 shrink backdrop-blur-sm bg-white/20 m-6 p-6 rounded-lg hover:shadow-xl hover:basis-1/2">
+            <img class="h-full w-full rounded-lg" src="../imgSec/booksicon2.svg" alt="image description">
+            <center>
+                <h2 class="text-white text-md">Books</h2>
+            </center>
+        </div>
+    </div>
+    <!-- End -->
+    <!-- Image SlideShow -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+</html>

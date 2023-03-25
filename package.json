@@ -1,15 +1,22 @@
 {
-  "name": "kidszone",
+  "name": "cse-3200-main",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"npx tailwindcss -i ./src/input.css -o ./dist/output.css -w"
+    "tail": "npx tailwindcss -i ./public/input.css -o ./public/dist/output.css -w",
+    "app": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.22",
+    "path": "^0.12.7"
+  },
   "devDependencies": {
     "tailwindcss": "^3.2.7"
   }
