@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inlcude Tailwind CSS -->
+    <link rel="stylesheet" href="../../dist/output.css">
+    <!-- Include JQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include local Javascript file -->
+    <script src="home.js"></script>
+    <!-- Title icon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <!-- END -->
+    <title>About</title>
+</head>
+<!-- Body -->
+
+<body class="bg-cover" style="background-image: url(../imgSec/cus2.jpg)">
+    <!-- Navbar -->
+    <%- include('universal/navbar') %>
+    <!-- <form action="" method="POST">
+        <label class="bg-cyan-400" for="fname">First name:</label><br>
+        <input class="border-4" type="text" name="fname"><br>
+        <label class="bg-cyan-400" for="lname">Last name:</label><br>
+        <input class="border-4" type="text" name="lname"><br><br>
+        <input class="bg-red-500" type="submit" value="Submit">
+    </form> -->
+    <!-- Contact US form -->
+    <div class="flex flex-row bg-white/20">
+        <div class="ml-5 pl-5 justify-center rounded-lg">
+            <img class="ml-5 pl-5 h-full shadow-xl rounded-lg" src="../imgSec/cus2.jpg" alt="">
+        </div>
+        <div class="w-full backdrop-blur-sm m-5 p-5">
+            <section class="mb-32 text-center text-gray-800">
+                <div class="max-w-[700px] mx-auto px-3 lg:px-6">
+                    <h2 class="text-xl text-black font-bold m-5">CONTACT US</h2>
+                    <form action="" method="POST">
+                        <div class="form-group m-5 hover:shadow-lg">
+                            <input name="name" type="text"
+                                class="form-control block shadow-inner w-full p-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                id="exampleInput7" placeholder="Name">
+                        </div>
+                        <div class="form-group m-5 hover:shadow-lg">
+                            <input name="email" type="email"
+                                class="form-control block shadow-inner w-full p-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                id="exampleInput8" placeholder="Email address">
+                        </div>
+                        <div class="form-group m-5 hover:shadow-lg">
+                            <input name="phone" type="text"
+                                class="form-control block shadow-inner w-full p-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                id="exampleInput8" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group m-5 hover:shadow-lg">
+                            <textarea name="msg"
+                                class="form-control block shadow-inner w-full p-3 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                id="exampleFormControlTextarea13" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full p-5 text-lg bg-blue-600 text-white font-medium leading-tight rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Send
+                            FeedBack</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- End -->
+</body>
+
+</html>

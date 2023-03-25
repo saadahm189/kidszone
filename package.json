@@ -2,7 +2,7 @@
   "name": "cse-3200-main",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "tail": "npx tailwindcss -i ./public/input.css -o ./public/dist/output.css -w",
     "app": "nodemon src/app.js"
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "hbs": "^4.2.0",
     "mysql": "^2.18.1",
