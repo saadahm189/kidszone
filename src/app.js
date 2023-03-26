@@ -56,8 +56,37 @@ app.get("/home/adminLogin", (req, res,) => {
 
 });
 app.get("/admin/index", (req, res,) => {
-    res.render('admin/index');
+    let count;
+    let count2;
+    var sql = "SELECT COUNT(sn) AS sn_total FROM contactus;";
+    var sql2 = "SELECT COUNT(sn) AS sn_total2 FROM admin;";
 
+    con.query(sql, function (error, result) {
+        if (error) throw error;
+        count = result[0].sn_total;
+        // res.render('admin/index', { count: count });
+        con.query(sql2, function (error, result2) {
+            if (error) throw error;
+            count2 = result2[0].sn_total2;
+            // res.render('admin/index', { count2: count2 });
+            res.render('admin/index', { count: count, count2: count2 });
+        });
+    });
+
+});
+app.get("/admin/contact", (req, res,) => {
+    con.query("SELECT * FROM contactus", (err, result) => {
+        if (err) throw err;
+        res.render('admin/contact', { data: result });
+    });
+});
+app.get("/delete/:id", (req, res,) => {
+    var id = req.params.id;
+    console.log(id);
+    con.query("DELETE FROM contactus WHERE sn = '" + id + "'", (err, result) => {
+        if (err) throw err;
+        return res.redirect('/admin/contact');
+    });
 });
 // ---------------------------------------------END EJS--------------------------------------------------------
 
@@ -89,15 +118,16 @@ app.post("/home/adminLogin", function (req, res) {
     console.log(username);
     console.log(password);
 
-    var sql = 'SELECT * FROM admin WHERE username = ? ';
+    var sql = 'SELECT * FROM admin WHERE username = ? AND password = ?';
 
-    con.query(sql, [username], function (error, data) {
+    con.query(sql, [username, password], function (error, data) {
         if (error) throw error;
         console.log(data);
-        if (data[0].username == username && data[0].password == password) {
+        if (data.length > 0) {
+            console.log("lenght");
             return res.redirect('/admin/index'); // Redirect to desired page:
         } else {
-            return res.redirect('/home/adminLogin'); // Redirect to desired page:
+            return res.redirect('/home/adminLogin');
         }
     });
 })
