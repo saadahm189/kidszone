@@ -22,6 +22,9 @@ const dyn_path = path.join(__dirname, "../public"); // Changed root folder to pu
 app.set('view engine', 'ejs');
 app.set("views", dyn_path);
 
+// Get means browser Render means local files in public:
+// " " in get means localhost:8000. Now it is test file:
+// Change "/home/index" to "/":
 // Rendering .ejs files one by one:
 app.get("/", (req, res,) => {
 
