@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "tail": "npx tailwindcss -i ./public/input.css -o ./public/dist/output.css -w",
-    "app": "nodemon src/app.js"
+    "app": "nodemon src/app.js",
+    "start": "concurrently \"npm run tail\" \"npm run app\""
   },
   "keywords": [],
   "author": "",

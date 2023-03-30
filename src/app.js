@@ -91,8 +91,11 @@ app.get("/delete/:id", (req, res,) => {
         return res.redirect('/admin/contact');
     });
 });
-// ---------------------------------------------END EJS--------------------------------------------------------
+app.get("/games/letter", (req, res,) => {
+    res.render('games/letter');
 
+});
+// ---------------------------------------------END EJS--------------------------------------------------------
 // Rendering all STATIC HTML from public folder: now used for CSS render as HTML changes to EJS
 const static_path = path.join(__dirname, "../public"); // Changed root folder to public: now public = "/"
 app.use(express.static(static_path));
