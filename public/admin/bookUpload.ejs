@@ -30,8 +30,10 @@
                         <div class="bg-gray-200 m-5 p-5 shadow-lg">
                             <!-- Uploading single files -->
                             <form action="/admin/bookUpload" method="POST" enctype="multipart/form-data">
+                                <label for="">Select PDF:</label>
                                 <input type="file" name="book" required>
-                                <!-- <input type="submit" value="Upload"> -->
+                                <label for="">Select Cover:</label>
+                                <input type="file" name="cover" required>
                                 <button class="bg-blue-600 rounded-lg m-2 p-2 text-white" type="submit">
                                     Submit
                                 </button>
@@ -39,12 +41,12 @@
                         </div>
                         <div class="bg-gray-200 m-5 p-5 shadow-lg">
                             <!-- Show pdf -->
-
                             <div class="bg-white m-5 p-5">
                                 <table class="bg-gray-300 shadow-lg table-auto w-full h-atuo">
                                     <thead class="bg-green-700 text-white text-left break-keep">
                                         <tr class="m-5 p-5 shadow-lg">
                                             <th class="m-5 p-5">Book Name</th>
+                                            <th class="m-5 p-5">Cover</th>
                                         </tr>
                                     </thead>
                                     <tbody class="break-keep">
@@ -52,6 +54,11 @@
                                             <tr class="m-5 p-5">
                                                 <td class="m-5 p-5"><a href="/uploads/<%- entry.original_name %>">
                                                         <%- entry.name %>
+                                                    </a>
+                                                </td>
+                                                <td class="m-5 p-5"><a href="/uploads/<%- entry.original_name %>">
+                                                        <img src="/uploads/<%- entry.original_cover %>"
+                                                            alt="not dounf cover">
                                                     </a>
                                                 </td>
                                             </tr>

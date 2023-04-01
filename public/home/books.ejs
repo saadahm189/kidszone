@@ -22,26 +22,54 @@
 <body class="bg-fixed" style="background-image: url(../img/librarybg.jpg)">
     <!-- Navbar -->
     <%- include('universal/navbar') %>
-    <!-- Razia -->
-    <div class="grid grid-flow-col m-10 p-5 text-white text-center text-lg rounded-lg">
-        <div class="flex flex-col bg-pink-400 m-5 p-10 rounded-lg">
-            <img class="h-full w-full shadow-lg rounded-md" src="../bookcover/GuardianCoverFull.jpg" alt="not found!" />
-            <h1 class="m-5">Guardian</h1>
+        <!-- Razia -->
+        <div class="grid grid-flow-col m-10 p-5 text-white text-center text-lg rounded-lg">
+            <div class="flex flex-col bg-pink-400 m-5 p-10 rounded-lg">
+                <img class="h-full w-full shadow-lg rounded-md" src="../bookcover/GuardianCoverFull.jpg"
+                    alt="not found!" />
+                <h1 class="m-5">Guardian</h1>
+            </div>
+            <div class="flex flex-col bg-pink-400 m-5 p-10 rounded-lg">
+                <img class="h-full w-full shadow-lg rounded-md" src="../bookcover/littlebrear.png" alt="not found!" />
+                <h1 class="m-5">Little Bear</h1>
+            </div>
+            <div class="flex flex-col bg-pink-400 m-5 p-10 rounded-lg">
+                <img class="h-full w-full shadow-lg rounded-md" src="../bookcover/hansel2.jpg" alt="not found!" />
+                <h1 class="m-5">Hensel</h1>
+            </div>
+            <div class="flex flex-col bg-pink-400 m-5 p-10 rounded-lg">
+                <img class="h-full w-full shadow-lg rounded-md" src="../bookcover/littlred.jpg" alt="not found!" />
+                <h1 class="m-5">Little Red</h1>
+            </div>
         </div>
-        <div class="flex flex-col bg-pink-400 m-5 p-10 rounded-lg">
-            <img class="h-full w-full shadow-lg rounded-md" src="../bookcover/littlebrear.png" alt="not found!" />
-            <h1 class="m-5">Little Bear</h1>
+        <!-- END -->
+        <div class="bg-gray-200 m-5 p-5 shadow-lg">
+            <!-- Show pdf -->
+            <div class="bg-white m-5 p-5">
+                <table class="bg-gray-300 shadow-lg table-auto w-full h-atuo">
+                    <thead class="bg-green-700 text-white text-left break-keep">
+                        <tr class="m-5 p-5 shadow-lg">
+                            <th class="m-5 p-5">Book Name</th>
+                            <th class="m-5 p-5">Cover</th>
+                        </tr>
+                    </thead>
+                    <tbody class="break-keep">
+                        <% data.forEach(entry=> { %>
+                            <tr class="m-5 p-5">
+                                <td class="m-5 p-5"><a href="/uploads/<%- entry.original_name %>">
+                                        <%- entry.name %>
+                                    </a>
+                                </td>
+                                <td class="m-5 p-5"><a href="/uploads/<%- entry.original_name %>">
+                                        <img src="/uploads/<%- entry.original_cover %>" alt="not dounf cover">
+                                    </a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="flex flex-col bg-pink-400 m-5 p-10 rounded-lg">
-            <img class="h-full w-full shadow-lg rounded-md" src="../bookcover/hansel2.jpg" alt="not found!" />
-            <h1 class="m-5">Hensel</h1>
-        </div>
-        <div class="flex flex-col bg-pink-400 m-5 p-10 rounded-lg">
-            <img class="h-full w-full shadow-lg rounded-md" src="../bookcover/littlred.jpg" alt="not found!" />
-            <h1 class="m-5">Little Red</h1>
-        </div>
-    </div>
-    <!-- END -->
 </body>
 
 </html>

@@ -40,6 +40,23 @@ const sotage = multer.diskStorage({
 });
 
 // For uploading file:
+// const upload = multer({
+//     // dest:"public/uploads", // default multer path without modify public/saad
+//     storage: sotage,
+//     limits: {
+//         fileSize: 10000000 // 10 mb
+//     },
+//     fileFilter: (req, file, cb) => {
+//         console.log(file);
+//         if (file.mimetype == "application/pdf") {
+//             cb(null, true);   // Condition match korle call back die no error and true send korbe browser e:
+//         }
+//         else {
+//             cb(new Error("Only PDF is allowed")); // Error ta niche  handle hobe 
+//         }
+//     }
+// })
+// // For uploading multiple file:
 const upload = multer({
     // dest:"public/uploads", // default multer path without modify public/saad
     storage: sotage,
@@ -48,11 +65,26 @@ const upload = multer({
     },
     fileFilter: (req, file, cb) => {
         console.log(file);
-        if (file.mimetype == "application/pdf") {
-            cb(null, true);   // Condition match korle call back die no error and true send korbe browser e:
+        if (file.fieldname == "book") {
+            if (file.mimetype == "application/pdf") {
+                cb(null, true);   // Condition match korle call back die no error and true send korbe browser e:
+            }
+            else {
+                cb(new Error("Only PDF is allowed")); // Error ta niche  handle hobe 
+            }
+        } else if (file.fieldname == "cover") {
+            if (file.mimetype == "image/png" ||
+                file.mimetype == "image/jpg" ||
+                file.mimetype == "image/jpeg"
+            ) {
+                cb(null, true);   // Condition match korle call back die no error and true send korbe browser e:
+            }
+            else {
+                cb(new Error("Only JPG is allowed")); // Error ta niche  handle hobe 
+            }
         }
         else {
-            cb(new Error("Only PDF is allowed")); // Error ta niche  handle hobe 
+            cb(new Error("Only JPG is allowed"));
         }
     }
 })
@@ -92,7 +124,12 @@ app.get("/home/games", (req, res,) => {
 
 });
 app.get("/home/books", (req, res,) => {
-    res.render('home/books');
+    // res.render('home/books');
+    // Shows book orifinal names from database: 
+    con.query("SELECT * FROM books", (err, result) => {
+        if (err) throw err;
+        res.render('home/books', { data: result });
+    });
 
 });
 app.get("/home/adminLogin", (req, res,) => {
@@ -142,14 +179,31 @@ app.get("/admin/bookUpload", (req, res,) => {
 });
 // Butoon press korar pore ekhane jaia hello print korbe:
 // Icca korle bookUpload page ei redirect kora jabe just test kete die bookUpload render kora lagbe and form thekeo:
-app.post("/admin/bookUpload", upload.single("book"), (req, res, next) => {
+// app.post("/admin/bookUpload", upload.single("book"),(req, res, next) => {
 
-    // res.send("File uploaded");
-    console.log(req.file);
-    var name = req.file.originalname;
-    var filename = req.file.filename;
-    console.log(filename);
-    con.query("INSERT INTO `books`(`name`,`original_name`) VALUES ('" + name + "','" + filename + "')", (err, result) => {
+//     // res.send("File uploaded");
+//     console.log(req.file);
+//     var name = req.file.originalname;
+//     var filename = req.file.filename;
+//     console.log(filename);
+//     con.query("INSERT INTO `books`(`name`,`original_name`) VALUES ('" + name + "','" + filename + "')", (err, result) => {
+//         if (err) throw err;
+//         return res.redirect('/admin/bookUpload');
+//     });
+// });
+// // For uploading mutiple files at one:
+app.post("/admin/bookUpload", upload.fields([
+    { name: "book", maxCount: 1 },
+    { name: "cover", maxCount: 1 },]
+), (req, res, next) => {
+
+    var bookname = req.files['book'][0].originalname;
+    var bookfilename = req.files['book'][0].filename;
+    var covername = req.files['cover'][0].originalname;
+    var coverfilename = req.files['cover'][0].filename;
+    console.log(bookfilename);
+    console.log(coverfilename);
+    con.query("INSERT INTO `books`(`name`,`original_name`,`cover`,`original_cover`) VALUES ('" + bookname + "','" + bookfilename + "','" + covername + "','" + coverfilename + "')", (err, result) => {
         if (err) throw err;
         return res.redirect('/admin/bookUpload');
     });
