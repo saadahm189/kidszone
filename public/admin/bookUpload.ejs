@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inlcude Tailwind CSS -->
+    <link rel="stylesheet" href="../dist/output.css">
+    <!-- Include local Javascript file -->
+    <script src="admin.js"></script>
+    <!-- Title icon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <!-- END -->
+    <title>Dashboard</title>
+</head>
+<!-- Body -->
+
+<body class="bg-gray-200">
+    <!-- Header -->
+    <%- include('partial/navbar') %>
+        <!-- HTML -->
+        <div class="flex flex-row">
+            <!-- Include Header -->
+            <%- include('partial/sidebar') %>
+                <!-- HTML -->
+                <div class="bg-white m-5 p-5 basis-4/5 rounded-lg">
+                    <div class="grid grid-cols-2">
+                        <div class="bg-gray-200 m-5 p-5 shadow-lg">
+                            <!-- Uploading single files -->
+                            <form action="/admin/bookUpload" method="POST" enctype="multipart/form-data">
+                                <input type="file" name="book" required>
+                                <!-- <input type="submit" value="Upload"> -->
+                                <button class="bg-blue-600 rounded-lg m-2 p-2 text-white" type="submit">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                        <div class="bg-gray-200 m-5 p-5 shadow-lg">
+                            <!-- Show pdf -->
+
+                            <div class="bg-white m-5 p-5">
+                                <table class="bg-gray-300 shadow-lg table-auto w-full h-atuo">
+                                    <thead class="bg-green-700 text-white text-left break-keep">
+                                        <tr class="m-5 p-5 shadow-lg">
+                                            <th class="m-5 p-5">Book Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="break-keep">
+                                        <% data.forEach(entry=> { %>
+                                            <tr class="m-5 p-5">
+                                                <td class="m-5 p-5"><a href="/uploads/<%- entry.original_name %>">
+                                                        <%- entry.name %>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <% }) %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</body>
+
+</html>

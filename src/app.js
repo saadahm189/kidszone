@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const multer = require("multer");
 
 // Importing DB connection:
 const con = require("./db/conn");
@@ -16,7 +17,47 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Declaring server port:
 const port = process.env.PORT || 8000;
 
-// -----------------------------------------EJS------------------------------------------------------------
+
+// File upload +++++++++++++++++++++++++++++++++++++++++++++++++++
+// Setting path for multer:
+//const mul_path = path.join(__dirname, "../public/uploads/");
+
+// Chnaging file name after uploading:
+const sotage = multer.diskStorage({
+    // Normally multer er path na die modify kore dicci:
+    destination: (req, file, cb) => {
+        cb(null, "public/uploads");
+    },
+    filename: (req, file, cb) => {
+        const fileExt = path.extname(file.originalname)
+        const fileName = file.originalname
+            .replace(fileExt, "")
+            .toLocaleLowerCase()
+            .split(" ")
+            .join("-") + "-" + Date.now();
+        cb(null, fileName + fileExt);
+    },
+});
+
+// For uploading file:
+const upload = multer({
+    // dest:"public/uploads", // default multer path without modify public/saad
+    storage: sotage,
+    limits: {
+        fileSize: 10000000 // 10 mb
+    },
+    fileFilter: (req, file, cb) => {
+        console.log(file);
+        if (file.mimetype == "application/pdf") {
+            cb(null, true);   // Condition match korle call back die no error and true send korbe browser e:
+        }
+        else {
+            cb(new Error("Only PDF is allowed")); // Error ta niche  handle hobe 
+        }
+    }
+})
+
+// -----------------------------------------Show EJS files Render------------------------------------------------------------
 // Changed default "view" path of ejs file to desired location:
 const dyn_path = path.join(__dirname, "../public"); // Changed root folder to public: now public = "/"
 app.set('view engine', 'ejs');
@@ -28,7 +69,7 @@ app.set("views", dyn_path);
 // Rendering .ejs files one by one:
 app.get("/", (req, res,) => {
 
-    con.query("SELECT * FROM contactus", (err, result) => {
+    con.query("SELECT * FROM test", (err, result) => {
         if (err) throw err;
         res.render('index', { data: result });
     });
@@ -88,12 +129,34 @@ app.get("/delete/:id", (req, res,) => {
     console.log(id);
     con.query("DELETE FROM contactus WHERE sn = '" + id + "'", (err, result) => {
         if (err) throw err;
-        return res.redirect('/admin/contact');
+
+    });
+});
+app.get("/admin/bookUpload", (req, res,) => {
+    // Shows book orifinal names from database: 
+    con.query("SELECT * FROM books", (err, result) => {
+        if (err) throw err;
+        res.render('admin/bookUpload', { data: result });
+    });
+
+});
+// Butoon press korar pore ekhane jaia hello print korbe:
+// Icca korle bookUpload page ei redirect kora jabe just test kete die bookUpload render kora lagbe and form thekeo:
+app.post("/admin/bookUpload", upload.single("book"), (req, res, next) => {
+
+    // res.send("File uploaded");
+    console.log(req.file);
+    var name = req.file.originalname;
+    var filename = req.file.filename;
+    console.log(filename);
+    con.query("INSERT INTO `books`(`name`,`original_name`) VALUES ('" + name + "','" + filename + "')", (err, result) => {
+        if (err) throw err;
+        return res.redirect('/admin/bookUpload');
     });
 });
 app.get("/games/letter", (req, res,) => {
-    res.render('games/letter');
 
+    res.render('games/letter');
 });
 // ---------------------------------------------END EJS--------------------------------------------------------
 // Rendering all STATIC HTML from public folder: now used for CSS render as HTML changes to EJS
@@ -152,6 +215,23 @@ app.post("/home/about", function (req, res) {
         // res.send("Success!");
         return res.redirect('/home/about'); // Redirect to desired page:
     });
+})
+// Default error handler:
+// Receive error from any code above and display eror message 
+app.use((err, req, res, next) => {
+    if (err) {
+        if (err instanceof multer.MulterError) {
+
+            res.status(500).send('Upload erorr!');
+        }
+        else {
+
+            res.status(500).send(err.message);
+        }
+    }
+    else {
+        res.send("Success");
+    }
 })
 // Creating server at port 8000:
 app.listen(port, () => {
