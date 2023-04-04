@@ -139,8 +139,10 @@ app.get("/home/adminLogin", (req, res,) => {
 app.get("/admin/index", (req, res,) => {
     let count;
     let count2;
+    let count3;
     var sql = "SELECT COUNT(sn) AS sn_total FROM contactus;";
     var sql2 = "SELECT COUNT(sn) AS sn_total2 FROM admin;";
+    var sql3 = "SELECT COUNT(sn) AS sn_total3 FROM books;";
 
     con.query(sql, function (error, result) {
         if (error) throw error;
@@ -150,7 +152,12 @@ app.get("/admin/index", (req, res,) => {
             if (error) throw error;
             count2 = result2[0].sn_total2;
             // res.render('admin/index', { count2: count2 });
-            res.render('admin/index', { count: count, count2: count2 });
+            con.query(sql3, function (error, result3) {
+                if (error) throw error;
+                count3 = result3[0].sn_total3;
+                // res.render('admin/index', { count2: count2 });
+                res.render('admin/index', { count: count, count2: count2, count3: count3 });
+            });
         });
     });
 
@@ -208,10 +215,17 @@ app.post("/admin/bookUpload", upload.fields([
         return res.redirect('/admin/bookUpload');
     });
 });
+
 app.get("/games/letter", (req, res,) => {
 
     res.render('games/letter');
 });
+
+app.get("/game2/memory", (req, res,) => {
+
+    res.render('game2/memory');
+});
+
 // ---------------------------------------------END EJS--------------------------------------------------------
 // Rendering all STATIC HTML from public folder: now used for CSS render as HTML changes to EJS
 const static_path = path.join(__dirname, "../public"); // Changed root folder to public: now public = "/"
