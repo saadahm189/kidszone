@@ -571,6 +571,10 @@ video {
   margin: 1.5rem;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -680,6 +684,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-48 {
+  width: 12rem;
 }
 
 .max-w-\[700px\] {
@@ -792,6 +800,10 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -802,6 +814,10 @@ video {
 
 .border-solid {
   border-style: solid;
+}
+
+.border-none {
+  border-style: none;
 }
 
 .border-gray-100 {
@@ -827,6 +843,11 @@ video {
 .bg-blue-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
+.bg-blue-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
 }
 
 .bg-cyan-400 {
@@ -911,8 +932,95 @@ video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
+.bg-blue-800\/30 {
+  background-color: rgb(30 64 175 / 0.3);
+}
+
+.bg-blue-700\/60 {
+  background-color: rgb(29 78 216 / 0.6);
+}
+
+.bg-blue-700\/80 {
+  background-color: rgb(29 78 216 / 0.8);
+}
+
+.bg-white\/80 {
+  background-color: rgb(255 255 255 / 0.8);
+}
+
+.bg-blue-900\/30 {
+  background-color: rgb(30 58 138 / 0.3);
+}
+
+.bg-blue-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+
+.bg-white\/60 {
+  background-color: rgb(255 255 255 / 0.6);
+}
+
+.bg-white\/0 {
+  background-color: rgb(255 255 255 / 0);
+}
+
+.bg-white\/100 {
+  background-color: rgb(255 255 255 / 1);
+}
+
+.bg-white\/90 {
+  background-color: rgb(255 255 255 / 0.9);
+}
+
+.bg-green-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 101 52 / var(--tw-bg-opacity));
+}
+
+.bg-blue-700\/90 {
+  background-color: rgb(29 78 216 / 0.9);
+}
+
+.bg-blue-800\/90 {
+  background-color: rgb(30 64 175 / 0.9);
+}
+
+.bg-green-700\/80 {
+  background-color: rgb(21 128 61 / 0.8);
+}
+
+.bg-red-600\/80 {
+  background-color: rgb(220 38 38 / 0.8);
+}
+
+.bg-green-700\/100 {
+  background-color: rgb(21 128 61 / 1);
+}
+
+.bg-red-600\/100 {
+  background-color: rgb(220 38 38 / 1);
+}
+
+.bg-green-700\/90 {
+  background-color: rgb(21 128 61 / 0.9);
+}
+
+.bg-red-600\/90 {
+  background-color: rgb(220 38 38 / 0.9);
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-none {
+  background-image: none;
 }
 
 .from-sky-500 {
@@ -981,6 +1089,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .pl-5 {
   padding-left: 1.25rem;
 }
@@ -991,6 +1104,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-end {
+  text-align: end;
 }
 
 .align-baseline {
@@ -1036,6 +1153,21 @@ video {
   line-height: 1.75rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1046,6 +1178,10 @@ video {
 
 .font-normal {
   font-weight: 400;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .italic {

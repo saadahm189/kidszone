@@ -19,62 +19,354 @@
 </head>
 <!-- Body -->
 
-<body class="bg-gray-300">
-    <button onclick="collaspe()">
-        <h1 class="text-5xl">Minimize</h1>
-    </button>
-    <div id="main" class="bg-white m-5 p-5 grid grid-cols-5">
+<body class="bg-cover" style="background-image: url(../img/bg4.jpg)">
+    <h1 class="text-5xl text-center m-5 p-5 uppercase bg-white/90 rounded-lg">Welcome to Alphabets</h1>
+    <div class="flex justify-between">
+        <button class="bg-red-600/90 text-white m-5 p-5 rounded-full" onclick="collaspe()">
+            <h1 class="text-xl">Minimize All</h1>
+        </button>
+        <button class="bg-green-700/90 text-white m-5 p-5 rounded-full" onclick="collaspe()">
+            <a href="/home/lesson" class="text-xl">Go Home</a>
+        </button>
+    </div>
+    <div id="main" class="bg-white/60 m-5 p-5 grid grid-cols-5 rounded-lg">
         <!-- A -->
-        <button onclick="A()">
-            <div class="bg-green-600 m-5 p-5">
-                <p class="text-5xl font-bold">A</p>
+        <button onclick="a()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">A</p>
                 <audio id="a_audio">
                     <source src="audio/a.mp3" type="audio/mp3">
                 </audio>
             </div>
         </button>
-        <div id="A" class="saad hidden bg-gray-300 m-5 p-5">
-            <p class="text-5xl font-bold m-5 p-5">Apple</p>
+        <div id="a" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">Apple</p>
             <img class="" src="img/apple.png" alt="apple">
         </div>
         <!-- B -->
-        <button onclick="B()">
-            <div class="bg-green-600 m-5 p-5">
-                <p class="text-5xl font-bold">B</p>
+        <button onclick="b()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">B</p>
                 <audio id="b_audio">
                     <source src="audio/b.mp3" type="audio/mp3">
                 </audio>
             </div>
         </button>
-        <div id="B" class="saad hidden bg-gray-300 m-5 p-5">
-            <p class="text-5xl font-bold m-5 p-5">Ball</p>
+        <div id="b" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">Ball</p>
             <img class="" src="img/ball.png" alt="ball">
         </div>
         <!-- C -->
-        <button onclick="C()">
-            <div class="bg-green-600 m-5 p-5">
-                <p class="text-5xl font-bold">C</p>
+        <button onclick="c()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">C</p>
                 <audio id="c_audio">
                     <source src="audio/c.mp3" type="audio/mp3">
                 </audio>
             </div>
         </button>
-        <div id="C" class="saad hidden bg-gray-300 m-5 p-5">
-            <p class="text-5xl font-bold m-5 p-5">Cat</p>
+        <div id="c" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">Cat</p>
             <img class="" src="img/cat.png" alt="cat">
         </div>
         <!-- D -->
-        <button onclick="D()">
-            <div class="bg-green-600 m-5 p-5">
-                <p class="text-5xl font-bold">D</p>
+        <button onclick="d()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">D</p>
                 <audio id="d_audio">
                     <source src="audio/d.mp3" type="audio/mp3">
                 </audio>
             </div>
         </button>
-        <div id="D" class="saad hidden bg-gray-300 m-5 p-5">
-            <p class="text-5xl font-bold m-5 p-5">Dog</p>
+        <div id="d" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">Dog</p>
             <img class="" src="img/dog.png" alt="dog">
+        </div>
+        <!-- E -->
+        <button onclick="e()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">E</p>
+                <audio id="e_audio">
+                    <source src="audio/e.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="e" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">Eagle</p>
+            <img class="" src="img/dog.png" alt="eagle">
+        </div>
+        <!-- F -->
+        <button onclick="f()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">F</p>
+                <audio id="f_audio">
+                    <source src="audio/f.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="f" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">Frog</p>
+            <img class="" src="img/dog.png" alt="frog">
+        </div>
+        <!-- G -->
+        <button onclick="g()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">G</p>
+                <audio id="g_audio">
+                    <source src="audio/g.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="g" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">G</p>
+            <img class="" src="img/dog.png" alt="g">
+        </div>
+        <!-- H -->
+        <button onclick="h()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">H</p>
+                <audio id="h_audio">
+                    <source src="audio/h.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="h" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">H</p>
+            <img class="" src="img/dog.png" alt="h">
+        </div>
+        <!-- I -->
+        <button onclick="i2()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">I</p>
+                <audio id="i2_audio">
+                    <source src="audio/i.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="i2" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">I</p>
+            <img class="" src="img/dog.png" alt="i">
+        </div>
+        <!-- J -->
+        <button onclick="j()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">J</p>
+                <audio id="j_audio">
+                    <source src="audio/j.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="j" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">J</p>
+            <img class="" src="img/dog.png" alt="j">
+        </div>
+        <!-- K -->
+        <button onclick="k()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">K</p>
+                <audio id="k_audio">
+                    <source src="audio/k.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="k" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">K</p>
+            <img class="" src="img/dog.png" alt="k">
+        </div>
+        <!-- L -->
+        <button onclick="l()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">L</p>
+                <audio id="l_audio">
+                    <source src="audio/l.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="l" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">L</p>
+            <img class="" src="img/dog.png" alt="l">
+        </div>
+        <!-- M -->
+        <button onclick="m2()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">M</p>
+                <audio id="m2_audio">
+                    <source src="audio/m.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="m2" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">M</p>
+            <img class="" src="img/dog.png" alt="m">
+        </div>
+        <!-- N -->
+        <button onclick="n()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">N</p>
+                <audio id="n_audio">
+                    <source src="audio/n.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="n" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">N</p>
+            <img class="" src="img/dog.png" alt="n">
+        </div>
+        <!-- O -->
+        <button onclick="o()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">O</p>
+                <audio id="o_audio">
+                    <source src="audio/o.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="o" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">O</p>
+            <img class="" src="img/dog.png" alt="dog">
+        </div>
+        <!-- P -->
+        <button onclick="p()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">P</p>
+                <audio id="p_audio">
+                    <source src="audio/p.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="p" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">P</p>
+            <img class="" src="img/dog.png" alt="p">
+        </div>
+        <!-- Q -->
+        <button onclick="q()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">Q</p>
+                <audio id="q_audio">
+                    <source src="audio/q.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="q" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">Q</p>
+            <img class="" src="img/dog.png" alt="q">
+        </div>
+        <!-- R -->
+        <button onclick="r()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">R</p>
+                <audio id="r_audio">
+                    <source src="audio/r.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="r" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">R</p>
+            <img class="" src="img/dog.png" alt="r">
+        </div>
+        <!-- S -->
+        <button onclick="s()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">S</p>
+                <audio id="s_audio">
+                    <source src="audio/s.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="s" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">S</p>
+            <img class="" src="img/dog.png" alt="s">
+        </div>
+        <!-- T -->
+        <button onclick="t()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">T</p>
+                <audio id="t_audio">
+                    <source src="audio/t.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="t" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">T</p>
+            <img class="" src="img/dog.png" alt="t">
+        </div>
+        <!-- U -->
+        <button onclick="u()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">U</p>
+                <audio id="u_audio">
+                    <source src="audio/u.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="u" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">U</p>
+            <img class="" src="img/dog.png" alt="u">
+        </div>
+        <!-- V -->
+        <button onclick="v()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">V</p>
+                <audio id="v_audio">
+                    <source src="audio/v.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="v" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">V</p>
+            <img class="" src="img/dog.png" alt="v">
+        </div>
+        <!-- W -->
+        <button onclick="w()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">W</p>
+                <audio id="w_audio">
+                    <source src="audio/w.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="w" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">W</p>
+            <img class="" src="img/dog.png" alt="w">
+        </div>
+        <!-- X -->
+        <button onclick="x()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">X</p>
+                <audio id="x_audio">
+                    <source src="audio/x.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="x" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">X</p>
+            <img class="" src="img/dog.png" alt="x">
+        </div>
+        <!-- Y -->
+        <button onclick="y()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">Y</p>
+                <audio id="y_audio">
+                    <source src="audio/y.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="y" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">Y</p>
+            <img class="" src="img/dog.png" alt="y">
+        </div>
+        <!-- Z -->
+        <button onclick="z()">
+            <div class="bg-blue-700 rounded-full m-5 p-5">
+                <p class="text-6xl text-white font-bold">Z</p>
+                <audio id="z_audio">
+                    <source src="audio/z.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </button>
+        <div id="z" class="saad hidden bg-none m-5 p-5">
+            <p class="text-6xl font-bold m-5 p-5">Z</p>
+            <img class="" src="img/dog.png" alt="z">
         </div>
     </div>
     <script>
@@ -87,32 +379,186 @@
                 all[i].classList.add("hidden");
             }
         }
-        function A() {
+        function a() {
             var audio = document.getElementById("a_audio");
             audio.play();
             collaspe();
-            var x = document.getElementById("A");
+            var x = document.getElementById("a");
             inner(x);
         }
-        function B() {
+        function b() {
             var audio = document.getElementById("b_audio");
             audio.play();
             collaspe();
-            var x = document.getElementById("B");
+            var x = document.getElementById("b");
             inner(x);
         }
-        function C() {
+        function c() {
             var audio = document.getElementById("c_audio");
             audio.play();
             collaspe();
-            var x = document.getElementById("C");
+            var x = document.getElementById("c");
             inner(x);
         }
-        function D() {
+        function d() {
             var audio = document.getElementById("d_audio");
             audio.play();
             collaspe();
-            var x = document.getElementById("D");
+            var x = document.getElementById("d");
+            inner(x);
+        }
+        function e() {
+            var audio = document.getElementById("e_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("e");
+            inner(x);
+        }
+        function f() {
+            var audio = document.getElementById("f_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("f");
+            inner(x);
+        }
+        function g() {
+            var audio = document.getElementById("g_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("g");
+            inner(x);
+        }
+        function h() {
+            var audio = document.getElementById("h_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("h");
+            inner(x);
+        }
+        function i2() {
+            var audio = document.getElementById("i2_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("i2");
+            inner(x);
+        }
+        function j() {
+            var audio = document.getElementById("j_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("j");
+            inner(x);
+        }
+        function k() {
+            var audio = document.getElementById("k_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("k");
+            inner(x);
+        }
+        function l() {
+            var audio = document.getElementById("l_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("l");
+            inner(x);
+        }
+        function m2() {
+            var audio = document.getElementById("m2_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("m2");
+            inner(x);
+        }
+        function n() {
+            var audio = document.getElementById("n_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("n");
+            inner(x);
+        }
+        function o() {
+            var audio = document.getElementById("o_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("o");
+            inner(x);
+        }
+        function p() {
+            var audio = document.getElementById("p_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("p");
+            inner(x);
+        }
+        function q() {
+            var audio = document.getElementById("q_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("q");
+            inner(x);
+        }
+        function r() {
+            var audio = document.getElementById("r_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("r");
+            inner(x);
+        }
+        function s() {
+            var audio = document.getElementById("s_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("s");
+            inner(x);
+        }
+        function t() {
+            var audio = document.getElementById("t_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("t");
+            inner(x);
+        }
+        function u() {
+            var audio = document.getElementById("u_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("u");
+            inner(x);
+        }
+        function v() {
+            var audio = document.getElementById("v_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("v");
+            inner(x);
+        }
+        function w() {
+            var audio = document.getElementById("w_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("w");
+            inner(x);
+        }
+        function x() {
+            var audio = document.getElementById("x_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("x");
+            inner(x);
+        }
+        function y() {
+            var audio = document.getElementById("y_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("y");
+            inner(x);
+        }
+        function z() {
+            var audio = document.getElementById("z_audio");
+            audio.play();
+            collaspe();
+            var x = document.getElementById("z");
             inner(x);
         }
         function inner(x) {

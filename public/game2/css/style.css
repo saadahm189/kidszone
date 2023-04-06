@@ -3,27 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: #f2f2f2;
-}
-
-.head {
-  max-width: 480px;
-  border: 2px solid #a6a6a6;
-  margin: auto;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
-  font-family: "Orbitron", sans-serif;
-  color: #333;
-}
-
-.score {
-  margin-top: 10px;
-}
 
 .container {
   max-width: 960px;
@@ -31,7 +10,6 @@ body {
   grid-template-columns: repeat(3, auto);
   gap: 1rem;
   margin: auto;
-  padding: 20px;
 }
 
 .cell div {
@@ -51,13 +29,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #a6a6a6;
   background-color: #f2f2f2;
   transform: rotateY(90deg);
 }
 
 .back {
-  background-color: #a6a6a6;
 }
 
 img {
@@ -68,6 +44,7 @@ img {
 .flip {
   transform: rotateY(0deg);
 }
+
 .match {
   transform: rotateY(0deg);
 }
