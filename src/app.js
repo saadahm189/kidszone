@@ -220,6 +220,10 @@ app.get("/games/letter", (req, res,) => {
 
     res.render('games/letter');
 });
+app.get("/games/planet", (req, res,) => {
+
+    res.render('games/planet');
+});
 
 app.get("/game2/memory", (req, res,) => {
 

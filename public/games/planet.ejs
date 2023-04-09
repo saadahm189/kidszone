@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inlcude Tailwind CSS -->
+    <link rel="stylesheet" href="../../dist/output.css">
+    <!-- Include JQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Include local Javascript file -->
+    <script src="home.js"></script>
+    <!-- Title icon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <!-- END -->
+    <title>Planet</title>
+</head>
+
+<body class="bg-fixed" style="background-image: url(./pic/bg2.jpg)">
+    <div class="bg-white/30 m-5 p-5 flex justify-between">
+        <p class="text-5xl text-center text-white">Welcome to PALNET system</p>
+        <button class="bg-red-500 rounded-full p-5 text-white"><a href="/home/lesson"> Go Home</a></button>
+    </div>
+    <div id="main" class="m-5 p-5 rounded-lg">
+        <!-- Sun  -->
+        <button class="flex" onclick="sun()">
+            <div class="">
+                <p class="text-3xl text-white">SUN</p>
+                <img class="w-[500px]" src="pic/sun.png" alt="earth">
+            </div>
+            <div id="sun" class="saad hidden">
+                <p class="text-5xl text-white">Details</p>
+            </div>
+        </button>
+        <!-- Earth -->
+        <button class="flex" onclick="earth()">
+            <div class="">
+                <p class="text-3xl text-white">EARTH</p>
+                <img class="w-[500px]" src="pic/earth.png" alt="earth">
+            </div>
+            <div id="earth" class="saad hidden">
+                <p class="text-5xl text-white">Details</p>
+            </div>
+        </button>
+        <!-- Earth -->
+        <button class="flex" onclick="earth()">
+            <div class="">
+                <p class="text-3xl text-white">EARTH</p>
+                <img class="w-[500px]" src="pic/venus.png" alt="earth">
+            </div>
+            <div id="earth" class="saad hidden">
+                <p class="text-5xl text-white">Details</p>
+            </div>
+        </button>
+    </div>
+
+
+    <script>
+        var m = document.getElementById("main");
+        var all = document.getElementsByClassName("saad");
+        var len = all.length;
+        console.log(len);
+        function collaspe() {
+            for (let i = 0; i < len; i++) {
+                all[i].classList.add("hidden");
+            }
+        }
+        function earth() {
+            var x = document.getElementById("earth");
+            inner(x);
+        }
+        function sun() {
+            collaspe();
+            var x = document.getElementById("sun");
+            inner(x);
+        }
+        function venus() {
+            collaspe();
+            var x = document.getElementById("venus");
+            inner(x);
+        }
+        function jupiter() {
+            collaspe();
+            var x = document.getElementById("jupiter");
+            inner(x);
+        }
+        function inner(x) {
+            x.classList.remove('hidden');
+            // m.classList.remove('grid-cols-3');
+            // m.classList.add('grid-cols-2');
+        }
+    </script>
+
+</body>
+
+</html>
