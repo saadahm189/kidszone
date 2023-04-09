@@ -29,6 +29,9 @@
         <source src="./wrong.mp3" type="audio/mp3">
     </audio>
     <!-- Math  -->
+    <div>
+        <h1 id="message" class=" text-white">None</h1>
+    </div>
     <div class="bg-slate-400 m-10 p-10 text-5xl font-bold grid grid-flow-col">
         <div>
             <h1 id="num1">1</h1>
@@ -48,6 +51,7 @@
         const option2 = document.getElementById("option2");
         const option3 = document.getElementById("option3");
         const audio = document.getElementById("wrongAudio");
+        const msg = document.getElementById("message");
         var answer = 0;
 
         function generate_equation() {
@@ -57,7 +61,7 @@
             var dummyAnswer2 = Math.floor(Math.random() * 10);
             var allAnswers = [];
             var switchAnswers = [];
-            
+
             answer = eval(num1 + num2);
 
             document.getElementById("num1").innerHTML = num1;
@@ -76,27 +80,33 @@
 
         option1.addEventListener("click", function () {
             if (option1.innerHTML == answer) {
+                msg.innerHTML = "Right!";
                 generate_equation();
             }
             else {
+                msg.innerHTML = "Wrong!";
                 audio.play();
             }
         });
 
         option2.addEventListener("click", function () {
             if (option2.innerHTML == answer) {
+                msg.innerHTML = "Right!";
                 generate_equation();
             }
             else {
+                msg.innerHTML = "Wrong!";
                 audio.play();
             }
         });
 
         option3.addEventListener("click", function () {
             if (option3.innerHTML == answer) {
+                msg.innerHTML = "Right!";
                 generate_equation();
             }
             else {
+                msg.innerHTML = "Wrong!";
                 audio.play();
             }
         });
