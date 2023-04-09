@@ -229,6 +229,10 @@ app.get("/game2/memory", (req, res,) => {
 
     res.render('game2/memory');
 });
+app.get("/game2/math", (req, res,) => {
+
+    res.render('game2/math');
+});
 
 // ---------------------------------------------END EJS--------------------------------------------------------
 // Rendering all STATIC HTML from public folder: now used for CSS render as HTML changes to EJS

@@ -682,6 +682,7 @@ video {
   width: 500px;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
@@ -690,10 +691,13 @@ video {
 =======
 =======
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+>>>>>>> Stashed changes
 .w-full {
   width: 100%;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 .w-auto {
   width: auto;
@@ -705,6 +709,14 @@ video {
 .max-w-\[700px\] {
   max-width: 700px;
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+.max-w-\[700px\] {
+  max-width: 700px;
+}
+
+.flex-initial {
+  flex: 0 1 auto;
+>>>>>>> Stashed changes
 }
 
 .shrink {
@@ -727,8 +739,21 @@ video {
   flex-basis: 80%;
 }
 
+<<<<<<< Updated upstream
 .table-auto {
   table-layout: auto;
+=======
+.basis-1\/2 {
+  flex-basis: 50%;
+}
+
+.table-auto {
+  table-layout: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+>>>>>>> Stashed changes
 }
 
 .appearance-none {
@@ -737,10 +762,24 @@ video {
           appearance: none;
 }
 
+<<<<<<< Updated upstream
+=======
+.grid-flow-row {
+  grid-auto-flow: row;
+}
+
+>>>>>>> Stashed changes
 .grid-flow-col {
   grid-auto-flow: column;
 }
 
+<<<<<<< Updated upstream
+=======
+.grid-flow-col-dense {
+  grid-auto-flow: column dense;
+}
+
+>>>>>>> Stashed changes
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -809,6 +848,7 @@ video {
   border-radius: 0.5rem;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 .rounded-sm {
@@ -824,6 +864,10 @@ video {
 .rounded-md {
   border-radius: 0.375rem;
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+.rounded-md {
+  border-radius: 0.375rem;
+>>>>>>> Stashed changes
 }
 
 .border {
@@ -834,6 +878,7 @@ video {
   border-width: 4px;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 .border-black {
@@ -850,6 +895,10 @@ video {
 .border-solid {
   border-style: solid;
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+.border-solid {
+  border-style: solid;
+>>>>>>> Stashed changes
 }
 
 .border-gray-100 {
@@ -877,6 +926,7 @@ video {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
@@ -894,6 +944,9 @@ video {
 =======
 .bg-cyan-400 {
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+.bg-cyan-400 {
+>>>>>>> Stashed changes
   --tw-bg-opacity: 1;
   background-color: rgb(34 211 238 / var(--tw-bg-opacity));
 }
@@ -918,6 +971,7 @@ video {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
@@ -952,6 +1006,21 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
+.bg-green-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+>>>>>>> Stashed changes
 }
 
 .bg-green-700\/90 {
@@ -973,6 +1042,7 @@ video {
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
@@ -996,6 +1066,10 @@ video {
 .bg-red-600\/90 {
   background-color: rgb(220 38 38 / 0.9);
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+.bg-red-600\/90 {
+  background-color: rgb(220 38 38 / 0.9);
+>>>>>>> Stashed changes
 }
 
 .bg-white {
@@ -1011,6 +1085,7 @@ video {
   background-color: rgb(255 255 255 / 0.3);
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 .bg-yellow-600 {
@@ -1038,6 +1113,8 @@ video {
 =======
 =======
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+>>>>>>> Stashed changes
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
 }
@@ -1053,6 +1130,7 @@ video {
 .bg-yellow-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 >>>>>>> Stashed changes:public/dist/output.css
@@ -1060,12 +1138,20 @@ video {
 >>>>>>> Stashed changes:public/dist/output.css
 =======
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+>>>>>>> Stashed changes
 }
 
 .bg-none {
   background-image: none;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
@@ -1097,6 +1183,10 @@ video {
 .bg-cover {
   background-size: cover;
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+.bg-cover {
+  background-size: cover;
+>>>>>>> Stashed changes
 }
 
 .bg-fixed {
@@ -1151,6 +1241,7 @@ video {
   padding-bottom: 0.5rem;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
@@ -1176,6 +1267,10 @@ video {
 .pl-5 {
   padding-left: 1.25rem;
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+.pl-5 {
+  padding-left: 1.25rem;
+>>>>>>> Stashed changes
 }
 
 .text-left {
@@ -1190,6 +1285,7 @@ video {
   vertical-align: baseline;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -1207,6 +1303,10 @@ video {
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+>>>>>>> Stashed changes
 }
 
 .text-3xl {
@@ -1217,10 +1317,13 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 >>>>>>> Stashed changes:public/dist/output.css
 =======
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+>>>>>>> Stashed changes
 }
 
 .text-5xl {
@@ -1253,6 +1356,7 @@ video {
   line-height: 1.75rem;
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
 <<<<<<< Updated upstream:dist/output.css
@@ -1267,6 +1371,8 @@ video {
 >>>>>>> Stashed changes:public/dist/output.css
 =======
 >>>>>>> Stashed changes:public/dist/output.css
+=======
+>>>>>>> Stashed changes
 .font-bold {
   font-weight: 700;
 }
@@ -1331,11 +1437,14 @@ video {
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+<<<<<<< Updated upstream
 .text-yellow-50 {
   --tw-text-opacity: 1;
   color: rgb(254 252 232 / var(--tw-text-opacity));
 }
 
+=======
+>>>>>>> Stashed changes
 .shadow-inner {
   --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
