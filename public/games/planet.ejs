@@ -18,20 +18,23 @@
 </head>
 
 <body class="bg-fixed" style="background-image: url(./pic/bg2.jpg)">
+    <!-- Header -->
     <div class="bg-white/30 m-5 p-5 flex justify-between">
-        <p class="text-5xl text-center text-white">Welcome to PALNET system</p>
-        <button class="bg-red-500 rounded-full p-5 text-white"><a href="/home/lesson"> Go Home</a></button>
+        <p class="text-5xl text-center text-white">Welcome to PLANET system</p>
+        <button class="bg-red-500 rounded-full p-5 text-white">
+            <a href="/home/lesson">Go Home</a>
+        </button>
     </div>
-    <div id="main" class="m-5 p-5 rounded-lg">
+    <!-- Planets -->
+    <div>
         <!-- Sun  -->
-        <button class="flex" onclick="sun()">
-            <div class="">
-                <p class="text-3xl text-white">SUN</p>
-                <img class="w-[500px]" src="pic/sun.png" alt="earth">
+        <button class="flex m-5 p-5" onclick="sun()">
+            <div class="w-full h-full m-2 p-2">
+                <img class="w-[500px] m-2 p-2" src="pic/sun.png" alt="earth">
             </div>
-            <div id="sun" class="saad hidden">
-                <p class="text-5xl text-white">Details</p>
-                <p class="text-xl text-yellow-50">The Sun is a 4.5 billion-year-old yellow dwarf star – a hot glowing
+            <div id="sun" class="saad hidden m-2 p-2">
+                <p class="text-5xl text-white">The Sun</p>
+                <p class="text-xl text-yellow-500">The Sun is a 4.5 billion-year-old yellow dwarf star – a hot glowing
                     ball of hydrogen and helium – at the center of our solar system. It’s about 93 million miles (150
                     million kilometers) from Earth and it’s our solar system’s only star. Without the Sun’s energy, life
                     as we know it could not exist on our home planet.The Sun is the largest object in our solar system.
@@ -43,15 +46,14 @@
             </div>
         </button>
         <!-- Earth -->
-        <button class="flex" onclick="earth()">
-            <div class="">
-                <p class="text-3xl text-white">EARTH</p>
-                <img class="w-[500px]" src="pic/earth.png" alt="earth">
+        <button class="flex m-5 p-5" onclick="earth()">
+            <div class="w-full h-full m-2 p-2">
+                <img class="w-[500px] m-2 p-2" src="pic/earth.png" alt="earth">
             </div>
-            <div id="earth" class="saad hidden">
-                <p class="text-5xl text-white">Details</p>
-                <p class="text-xl text-yellow-50"> Earth is only the fifth largest planet in the solar system, it is the
-                    only world in our solar system with liquid water on the surface.The name Earth is at least 1,000
+            <div id="earth" class="saad hidden m-2 p-2">
+                <p class="text-5xl text-white">The Earth</p>
+                <p class="text-xl text-yellow-500"> Earth is only the fifth largest planet in the solar system, it is
+                    theonly world in our solar system with liquid water on the surface.The name Earth is at least 1,000
                     years old. All of the planets, except for Earth, were named after Greek and Roman gods and
                     goddesses. However, the name Earth is a Germanic word, which simply means “the ground.The Earth
                     takes 365.25 days to go around the sun, along its elliptical orbit. In space, its orbit is located
@@ -61,14 +63,13 @@
             </div>
         </button>
         <!-- venus -->
-        <button class="flex" onclick="venus()">
-            <div class="">
-                <p class="text-3xl text-white">VENUS</p>
-                <img class="w-[500px]" src="pic/venus.png" alt="venus">
+        <!-- <button class="flex m-5 p-5" onclick="venus()">
+            <div class="w-full h-full m-2 p-2">
+                <img class="w-[500px] m-2 p-2" src="pic/venus.png" alt="venus">
             </div>
-            <div id="venus" class="saad hidden">
-                <p class="text-5xl text-white">Details</p>
-                <p class="text-xl text-yellow-50">Venus is the second planet from the Sun and is Earth’s closest
+            <div id="venus" class="saad hidden m-2 p-2">
+                <p class="text-5xl text-white">The Venus</p>
+                <p class="text-xl text-yellow-500">Venus is the second planet from the Sun and is Earth’s closest
                     planetary neighbor. It’s one of the four inner, terrestrial (or rocky) planets, and it’s often
                     called Earth’s twin because it’s similar in size and density. These are not identical twins, however
                     – there are radical differences between the two worlds.The Latest
@@ -82,17 +83,16 @@
                     crushing air pressure at its surface – more than 90 times that of Earth – similar to the
                     pressure you'd encounter a mile below the ocean on Earth.</p>
             </div>
-        </button>
-
+        </button> -->
         <!-- jupiter -->
-        <button class="flex" onclick="jupiter()">
-            <div class="">
-                <p class="text-3xl text-white">JUPITER</p>
-                <img class="w-[500px]" src="pic/jupiter.png" alt="jupiter">
+        <!-- <button class="flex m-5 p-5" onclick="jupiter()">
+            <div class="w-full h-full m-2 p-2">
+                <img class="w-[500px] m-2 p-2" src="pic/jupiter.png" alt="jupiter">
             </div>
-            <div id="jupiter" class="saad hidden">
-                <p class="text-5xl text-white">Details</p>
-                <p class="text-xl text-yellow-50">Jupiter has a long history of surprising scientists – all the way back
+            <div id="jupiter" class="saad hidden m-2 p-2">
+                <p class="text-5xl text-white">The Jupiter</p>
+                <p class="text-xl text-yellow-500">Jupiter has a long history of surprising scientists – all the way
+                    back
                     to 1610 when Galileo Galilei found the first moons beyond Earth. That discovery changed the way we
                     see the universe.The Latest
                     40-Year Study Finds Mysterious Patterns in Temperatures at Jupiter
@@ -103,43 +103,28 @@
                     in an atmosphere of hydrogen and helium. Jupiter’s iconic Great Red Spot is a giant storm bigger
                     than Earth that has raged for hundreds of years.</p>
             </div>
-        </button>
+        </button> -->
     </div>
-
-
+    <!-- Javascript -->
     <script>
-        var m = document.getElementById("main");
-        var all = document.getElementsByClassName("saad");
-        var len = all.length;
-        console.log(len);
-        function collaspe() {
-            for (let i = 0; i < len; i++) {
-                all[i].classList.add("hidden");
-            }
-        }
         function earth() {
             var x = document.getElementById("earth");
             inner(x);
         }
         function sun() {
-            collaspe();
             var x = document.getElementById("sun");
             inner(x);
         }
         function venus() {
-            collaspe();
             var x = document.getElementById("venus");
             inner(x);
         }
         function jupiter() {
-            collaspe();
             var x = document.getElementById("jupiter");
             inner(x);
         }
         function inner(x) {
             x.classList.remove('hidden');
-            // m.classList.remove('grid-cols-3');
-            // m.classList.add('grid-cols-2');
         }
     </script>
 
