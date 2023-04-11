@@ -18,12 +18,15 @@
 </head>
 
 <body class="bg-cover" style="background-image: url(../img/bg3.jpg)">
-    <div class="bg-white text-3xl m-5 p-5 text-center flex justify-between">
+    <div class="bg-white shadow-xl text-3xl m-5 p-5 text-center flex justify-between">
         <h2 class="font-bold">MATH GAME</h2>
+        <!-- Score and warning -->
         <h1 id="message" class="text-3xl text-red-600 font-bold"></h1>
-        <button>
-            <a href="/home/games" class="">Go Home</a>
-        </button>
+        <h1 id="score" class="text-3xl text-red-600 font-bold"></h1>
+        <!-- Reload -->
+        <button class="text-3xl text-green-600 font-bold" onclick="reload()">RESTART</button>
+        <!-- Go home -->
+        <button><a href="/home/games" class="">Go Home</a></button>
     </div>
     <!-- Wrong audio -->
     <audio id="wrongAudio">
@@ -31,23 +34,27 @@
     </audio>
     <!-- Math  -->
     <div>
-        <div class="bg-white rounded-lg m-10 p-10 text-5xl font-bold flex flex-col justify-center items-center">
+        <div
+            class="bg-white shadow-xl rounded-lg m-10 p-10 text-5xl font-bold flex flex-col justify-center items-center">
             <div class="flex mb-5">
-                <h1 class="p-5 w-28 text-center bg-yellow-500 rounded-full text-white" id="num1">1</h1>
-                <h1 class="p-5 w-28 text-center rounded-full">+</h1>
-                <h1 class="p-5 w-28 text-center bg-blue-500 rounded-full text-white" id="num2">2</h1>
-                <h1 class="p-5 w-28 text-center rounded-full">=</h1>
-                <h1 class="p-5 w-28 text-center bg-cyan-500 rounded-full text-white">?</h1>
+                <h1 class="p-5 w-28 shadow-xl text-center bg-yellow-500 rounded-full text-white" id="num1">1</h1>
+                <h1 class="p-5 w-28  text-center rounded-full">+</h1>
+                <h1 class="p-5 w-28 shadow-xl text-center bg-blue-500 rounded-full text-white" id="num2">2</h1>
+                <h1 class="p-5 w-28  text-center rounded-full">=</h1>
+                <h1 class="p-5 w-28 shadow-xl text-center bg-cyan-900 rounded-full text-white">?</h1>
             </div>
             <h2 class="font-bold text-2xl">Choose the right answer:</h2>
             <div class="mt-5 flex flex-row">
-                <h1 id="option1" class="cursor-pointer m-5 p-5 w-28 text-center bg-red-700 rounded-full text-white">
+                <h1 id="option1"
+                    class="shadow-xl cursor-pointer m-5 p-5 w-28 text-center bg-red-500 rounded-full text-white">
                     0
                 </h1>
-                <h1 id="option2" class="cursor-pointer m-5 p-5 w-28 text-center bg-purple-700 rounded-full text-white">
+                <h1 id="option2"
+                    class="shadow-xl cursor-pointer m-5 p-5 w-28 text-center bg-sky-800 rounded-full text-white">
                     2
                 </h1>
-                <h1 id="option3" class="cursor-pointer m-5 p-5 w-28 text-center bg-sky-700 rounded-full text-white">
+                <h1 id="option3"
+                    class="shadow-xl cursor-pointer m-5 p-5 w-28 text-center bg-purple-700 rounded-full text-white">
                     3
                 </h1>
             </div>
@@ -58,13 +65,19 @@
             const option3 = document.getElementById("option3");
             const audio = document.getElementById("wrongAudio");
             const msg = document.getElementById("message");
+            const scr = document.getElementById("score");
             var answer = 0;
+            var score = 0;
+
+            function reload() {
+                location.reload();
+            }
 
             function generate_equation() {
                 var num1 = Math.floor(Math.random() * 13);
                 var num2 = Math.floor(Math.random() * 13);
-                var dummyAnswer1 = Math.floor(Math.random() * 10);
-                var dummyAnswer2 = Math.floor(Math.random() * 10);
+                var dummyAnswer1 = Math.floor(Math.random() * 8);
+                var dummyAnswer2 = Math.floor(Math.random() * 12);
                 var allAnswers = [];
                 var switchAnswers = [];
 
@@ -82,6 +95,8 @@
                 option1.innerHTML = switchAnswers[0];
                 option2.innerHTML = switchAnswers[1];
                 option3.innerHTML = switchAnswers[2];
+                scr.innerHTML = "Score:" + score;
+                score++;
             };
 
             option1.addEventListener("click", function () {
@@ -117,9 +132,16 @@
                 }
             });
 
-            generate_equation()
+            // TEST var pass to backend
+            // axios({
+            //     method: "POST",
+            //     url: "/game2/math",
+            //     data: {
+            //         fileName: score,
+            //     }
+            // });
 
-
+            generate_equation();
         </script>
 </body>
 

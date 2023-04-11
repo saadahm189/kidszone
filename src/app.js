@@ -233,6 +233,11 @@ app.get("/game2/math", (req, res,) => {
 
     res.render('game2/math');
 });
+// TEST
+app.post("/game2/math", (req, res,) => {
+    var saad = req.body.fileName;
+    console.log(saad);
+});
 
 // ---------------------------------------------END EJS--------------------------------------------------------
 // Rendering all STATIC HTML from public folder: now used for CSS render as HTML changes to EJS
