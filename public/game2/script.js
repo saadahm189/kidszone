@@ -5,6 +5,9 @@ const score = document.querySelector('.score span')
 
 suffleImage()
 clicking()
+function reload() {
+    location.reload();
+}
 function suffleImage() {
 
 

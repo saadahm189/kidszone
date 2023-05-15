@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const multer = require("multer");
+const session = require("express-session");
 
 // Importing DB connection:
 const con = require("./db/conn");
@@ -38,7 +39,6 @@ const sotage = multer.diskStorage({
         cb(null, fileName + fileExt);
     },
 });
-
 // For uploading file:
 // const upload = multer({
 //     // dest:"public/uploads", // default multer path without modify public/saad
@@ -115,6 +115,7 @@ app.get("/home/lesson", (req, res,) => {
     res.render('home/lesson');
 
 });
+require("../public/home/home");
 app.get("/home/about", (req, res,) => {
     res.render('home/about');
 
@@ -233,6 +234,11 @@ app.get("/game2/math", (req, res,) => {
 
     res.render('game2/math');
 });
+// TEST
+app.post("/game2/math", (req, res,) => {
+    var saad = req.body.fileName;
+    console.log(saad);
+});
 
 // ---------------------------------------------END EJS--------------------------------------------------------
 // Rendering all STATIC HTML from public folder: now used for CSS render as HTML changes to EJS
@@ -313,4 +319,5 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
     console.log("Server running PORT:8000");
 })
+// Export module from this page:
 module.exports = app
